@@ -57,7 +57,6 @@ module.exports = function (app, config) {
 			this.model.get_redir_exist_async(redir, function(results) {
 
 				var filepath = require('path').normalize(__dirname + '/../public/uploads/' + results[0].name.replace(' ', '_'));
-				//console.log(path);
 
 				if(results.length) {
 					app.getModel('Upload').upload_seen(redir, function() {

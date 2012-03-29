@@ -30,3 +30,5 @@ exports.reduct = function genHash(model, callback){
 		}
 	});
 };
+
+//function to create a random string and check wether it already exists or not. It's in a separated file because it's reused by many controllers

@@ -7,3 +7,5 @@ module.exports = function (app, config) {
 	});
 
 };
+
+//this module is entirely done client-side. We only need to give the page

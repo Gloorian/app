@@ -25,3 +25,5 @@ module.exports = function (app, config) {
 	});
 
 };
+
+//basic methods almost the same in every models

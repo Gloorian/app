@@ -23,3 +23,5 @@ module.exports = function (app) {
 		]
 	};
 };
+
+//routes: ['method (get, post)', 'url to get, :example are got by req.params.example', 'Controller', 'action, optional, index by defaults']

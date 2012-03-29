@@ -6,19 +6,18 @@ var matador = require('matador'),
 	port = argv.port || 3000;
 
 app.configure(function () {
-	app.set('views', __dirname + '/app/views');
+	app.set('views', __dirname + '/app/views'); //set the views directory
 	app.set('view engine', 'html');
-	app.register('.html', matador.engine);
-
-	//app.use(matador.vhost('ks3097675.kimsufi.com', require(__dirname + '/app/hosts/test/all/server')));
-
+	app.register('.html', matador.engine); //allows .html extensions
 	app.use(matador.cookieParser());
-	app.use(matador.session({secret: 'boosh'}));
+	app.use(matador.session({secret: 'boosh'})); //no need of it for this app, but here in case
 	app.use(matador.favicon(__dirname + '/app/public/img/favicon.ico'));
-	app.use(matador.bodyParser({uploadDir: __dirname + '/app/public/uploads'}));
+	app.use(matador.bodyParser({uploadDir: __dirname + '/app/tmp'})); //put the temporary files into a specific folder for permission issues
 	app.use(matador.methodOverride());
 	app.use(matador.errorHandler({ dumpExceptions: true, showStack: true }));
 });
+
+//basic configuration of matador
 
 app.configure('development', function () {
 	app.use(matador.errorHandler({ dumpExceptions: true, showStack: true }));

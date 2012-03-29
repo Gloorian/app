@@ -4,3 +4,5 @@ module.exports = {
 		user: 'login',
 		password: 'mdp'
 };
+
+//config of your Db. In this app, it's for mysql

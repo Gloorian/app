@@ -9,3 +9,5 @@ module.exports = function (app, config) {
 		});
 	});
 };
+
+//configure the access to the database

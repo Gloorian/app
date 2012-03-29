@@ -53,6 +53,7 @@ module.exports = function (app, config) {
 					require('fs').readFile(__dirname + '/../public/paste/' + results[0].name.replace(' ', '_'), 'utf-8', function(err, data) {
 						if(err) { throw err; }
 						var text = results[0].type == 'txt' ? true : false;
+						//checks the type of the the paste
 						app.getController('Paste').render(res, 'paste/result', {code: data, titre: results[0].title, type: results[0].type, text: text, paste_pretty: true, title: 'Âpp', paste: true, redir: redir});
 					});
 				} else {
