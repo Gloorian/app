@@ -1,0 +1,32 @@
+<div class="navbar navbar-fixed-top">
+	<div class="navbar-inner">
+		<div class="container">
+			<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</a>
+			<a class="brand" href="/">{{title}}</a>
+			<div class="nav-collapse">
+				<ul class="nav">
+					<li {{#home}} class="active" {{/home}}>
+						<a href="/">Accueil</a>
+					</li>
+					<li {{#url}} class="active" {{/url}}>
+						<a href="/url">Url</a>
+					</li>
+					<li {{#upload}} class="active" {{/upload}}>
+						<a href="/upload">Hébergeur</a>
+					</li>
+					<li {{#password}} class="active" {{/password}}>
+						<a href="/password">Mot de passe</a>
+					</li>
+					<li {{#paste}} class="active" {{/paste}}>
+						<a href="/paste">Pastecode</a>
+					</li>
+				</ul>
+			</div>
+			<!--/.nav-collapse -->
+		</div>
+	</div>
+</div>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		{{>head}}
+	</head>
+	<body {{#paste_pretty}} onload="prettyPrint()" {{/paste_pretty}} >
+		{{>navbar}}
+		<div class="container">
+			<div id="body">
+				{{{body}}}
+			</div>
+			<hr />
+			{{>footer}}
+		</div>
+	</body>
+</html>

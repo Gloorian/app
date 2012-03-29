@@ -1,0 +1,38 @@
+<div id="result">
+	<h2>{{name}}</h2>
+	<p>
+		<a href="/upload/dl/{{redir}}"><img src="/upload/dl/{{redir}}" style="width: 300px;" /></a>
+	</p>
+	<p>
+		<form class="form-horizontal">
+			<fieldset>
+				<legend>Liens</legend>
+				<div class="control-group">
+					<label class="control-label" for="input01">Lien direct</label>
+					<div class="controls">
+						<input type="text" class="input-xlarge" id="input01" value="http://âpp.com/upload/{{redir}}" />
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label" for="input02">Lien de téléchargement</label>
+					<div class="controls">
+						<input type="text" class="input-xlarge" id="input02" value="http://âpp.com/upload/dl/{{redir}}" />
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label" for="input03">Lien HTML</label>
+					<div class="controls">
+						<input type="text" class="input-xlarge" id="input03" value="<a href=&quot;http://âpp.com/upload/dl/{{redir}}&quot;>http://âpp.com/upload/dl/{{redir}}</a>" />
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label" for="input04">Lien BBCode</label>
+					<div class="controls">
+						<input type="text" class="input-xlarge" id="input04" value="[url=http://âpp.com/upload/dl/{{redir}}]http://âpp.com/upload/dl/{{redir}}[/url]" />
+					</div>
+				</div>
+			</fieldset>
+		</form>
+		<a href="/upload/dl/{{redir}}" style="font-size: 2em;" class="button-link" style="margin-top: 30px;">Téléchargement</a>
+	</p>
+</div>

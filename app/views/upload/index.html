@@ -1,0 +1,16 @@
+<header class="jumbotron subhead">
+	<h1>{{title}}</h1>
+	<p class="lead">
+		Bienvenue à {{title}}, votre nouvel hébergeur de fichiers préféré (zip, tar.gz, png, jpeg, pdf).
+		<div class="alert alert-info">
+			<a class="close" data-dismiss="alert">×</a>
+			<strong>Note: </strong>Pour héberger des fichiers ne contenant uniquement que du texte, veuillez utiliser <a href="/paste">Âpp PasteCode</a>
+		</div>
+	</p>
+</header>
+<div id="input_place" style="text-align: center;">
+	<form class="well form-inline" action="/upload/sent" method="post" enctype="multipart/form-data">
+		<input type="file" class="input-file" name="file" placeholder="Fichier à envoyer" />
+		<button type="submit" class="btn btn-primary">Envoyer</button>
+	</form>
+</div>

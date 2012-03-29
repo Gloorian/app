@@ -1,0 +1,34 @@
+var matador = require('matador'),
+	env = process.env.NODE_ENV || 'development',
+	argv = matador.argv,
+	config = require('./app/config/' + env),
+	app = matador.createApp(__dirname, config, {}),
+	port = argv.port || 3000;
+
+app.configure(function () {
+	app.set('views', __dirname + '/app/views');
+	app.set('view engine', 'html');
+	app.register('.html', matador.engine);
+
+	//app.use(matador.vhost('ks3097675.kimsufi.com', require(__dirname + '/app/hosts/test/all/server')));
+
+	app.use(matador.cookieParser());
+	app.use(matador.session({secret: 'boosh'}));
+	app.use(matador.favicon(__dirname + '/app/public/img/app.ico'));
+	app.use(matador.bodyParser({uploadDir: __dirname + '/app/public/uploads'}));
+	app.use(matador.methodOverride());
+	app.use(matador.errorHandler({ dumpExceptions: true, showStack: true }));
+});
+
+app.configure('development', function () {
+	app.use(matador.errorHandler({ dumpExceptions: true, showStack: true }));
+});
+
+app.configure('production', function () {
+	app.use(matador.errorHandler());
+});
+
+app.prefetch();
+app.mount();
+app.listen(port);
+console.log('matador running on port ' + port);

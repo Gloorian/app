@@ -1,0 +1,38 @@
+<header class="jumbotron subhead">
+	<h1 class="logo"><span>{{title}} Paste Code</span></h1>
+	<div class="description">
+		<p>Cette application vous permet de facilement partager des bouts de code.</p>
+	</div>
+</header>
+<form class="form-horizontal" method="post" action="/paste/sent">
+	<div class="control-group">
+		<label class="control-label" for="textarea">Votre code</label>
+		<div class="controls">
+			<textarea class="input-xlarge" id="textarea" rows="6" name="code"></textarea>
+		</div>
+	</div>
+	<div class="control-group">
+		<label class="control-label" for="input01">Titre</label>
+		<div class="controls">
+			<input type="text" class="input-xlarge" id="input01" name="title"/>
+		</div>
+	</div>
+	<div class="control-group">
+		<label class="control-label" for="select01">Language</label>
+		<div class="controls">
+			<select id="select01" name="type" value="text">
+				<option value="txt">Texte</option>
+				<option value="js">Javascript</option>
+				<option value="c">C</option>
+				<option value="py">Python</option>
+				<option value="sh">Bash</option>
+				<option value="sql">SQL</option>
+				<option value="html">HTML</option>
+				<option value="xml">XML</option>
+				<option value="css">CSS</option>
+				<option value="php">PHP</option>
+			</select>
+		</div>
+	</div>
+	<button class="btn" type="submit">Envoyer</button>
+</form>

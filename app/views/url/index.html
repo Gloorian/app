@@ -1,0 +1,13 @@
+<header class="jumbotron subhead">
+	<h1>{{title}}</h1>
+	<p class="lead">
+		Bienvenue à {{title}}, votre nouveau raccourcisseur d'URL préféré.
+	</p>
+</header>
+<div id="input_place" style="text-align: center;">
+	<form method="post" action="/url/sent" id="form" class="well form-inline">
+		<input type="text" placeholder="url à raccourcir" name="url" id="url" />	
+		<button type="submit" class="btn btn-primary">Envoyer</button>
+	</form>
+</div>
+

@@ -1,0 +1,16 @@
+<h1>{{titre}}</h1>
+<a href="/paste/dl/{{redir}}">Télécharger</a>
+<div class="alert alert-info">
+	<a class="close" data-dismiss="alert">×</a>
+	<strong>Note: </strong>Tous les fichiers sont par défauts au format texte lors du téléchargement.
+</div>
+<div>
+	{{^text}}
+		<pre class="prettyprint language-{{type}}" style="margin-bottom: 9px;">{{code}}</pre>
+	{{/text}}
+	{{#text}}
+		<pre>{{code}}</pre>
+	{{/text}}
+
+	<textarea class="input-xxlarge" id="textarea" rows="12" style="width: 1164px;">{{code}}</textarea>
+</div>
